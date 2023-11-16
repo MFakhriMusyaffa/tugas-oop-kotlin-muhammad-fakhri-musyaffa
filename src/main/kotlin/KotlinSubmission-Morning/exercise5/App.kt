@@ -7,7 +7,7 @@ fun main() {
      * Buat variable dengan nama hero dibawah ini dan isi nilai variable tersebut dengan class Hero
      *
      */
-
+    val hero = Hero()
 
     /**
      * Latihan 2
@@ -15,7 +15,7 @@ fun main() {
      * Dan isi argumen-argumen / data dari parameter sesuai data diri Anda (Name, Age, Height)
      *
      */
-
+    hero.setProfile("Muhammad Fakhri Musyaffa", 20, 170)
 
 
     /**
@@ -23,7 +23,7 @@ fun main() {
      * Tampilkan data profile dibawah ini, sebelum melakukan aktivitas
      *
      */
-
+    hero.profile()
 
 
     /**
@@ -49,7 +49,7 @@ fun main() {
     Akatsuki -> jalan 2x, lari 1x, makan 2x, minum 1x, lompat 2x, duduk 4x
     Lumos -> jalan 2x, lari 1x, makan 5x, minum 2x, lompat 3x, duduk 1x
     Big Bang & Dinosaur -> jalan 1x, lari 2x, makan 3x, minum 4x, lompat 5x, duduk 6x
-    Baldwin -> jalan 5x, lari 3x, makan 1x, minum 2x, lompat 3x, duduk 2x
+    Baldwin -> jalan 5x, lari 3x, makan 1x, minum 2x, lompat 3x, duduk 2x //
     Sychronize -> jalan 1x, lari 3x, makan 2x, minum 5x, lompat 4x, duduk 1x
     WIB (Waktu Indonesia Bahagia) -> jalan 4x, lari 2x, makan 1x, minum 5x, lompat 2x, duduk 3x
     Eternal Light -> jalan 3x, lari 2x, makan 4x, minum 1x, lompat 5x, duduk 1x
@@ -65,15 +65,24 @@ fun main() {
      * Jalankan aktivitas-aktivitas dengan memanggil fungsi-fungsi sesuai challenge diatas
      *
      */
+    fun Nawasena(jalan: Int,lari:Int,makan: Int,minum:Int,lompat:Int,duduk:Int) {
+        repeat(jalan){hero.jalan()}
+        repeat(lari){hero.lari()}
+        repeat(makan){hero.makan()}
+        repeat(minum){hero.minum()}
+        repeat(lompat){hero.lompat()}
+        repeat(duduk){hero.duduk()}
+    }
 
-
+    //Baldwin berubah menjadi nama tim Nawasena
+    Nawasena(5,3,1,2,3,2)
+    //Baldwin -> jalan 5x, lari 3x, makan 1x, minum 2x, lompat 3x, duduk 2x
 
     /**
      * Latihan 5
      * Panggil fungsi profile dibawah ini untuk menampilkan status terkini setelah melakukan aktivitas
      *
      */
-
-
+    hero.profile()
 
 }

@@ -10,7 +10,15 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val namaDepan : String = "Muhammad"
+    val namaBelakang : String = "Fakhri Musyaffa"
+    val umur: Int = 20
+    val status: Boolean = true
 
+    println("Nama depan saya yang diberikan orang tua : $namaDepan")
+    println("Nama belakang saya yang diberikan orang tua : $namaBelakang")
+    println("Umur saya saat ini $umur tahun")
+    println("Status saya saat ini : ${if (status) "Belum Menikah" else "Sudah Menikah"}")
 }
 
 
@@ -19,7 +27,7 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    return "$groupId, $groupMember, $session"
 }
 
 /**
@@ -29,8 +37,10 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
-
-    return listOf()
+    val listAnggota = listOf("Ahmad","Irma", "Fakhri", "Fadli", "Aufal", "Raka", "Dandi", "Alief", "Farhan", "Fikri")
+    val namaSaya = listAnggota[2]
+    println("Perkenalkan nama saya $namaSaya")
+    return listOf(listAnggota)
 }
 
 /**
@@ -41,10 +51,10 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
-
-    return 0
+    val mentor = arrayOf<String>("Ka Sarif", "Ka Meggy")
+    val listAnggota = arrayOf("Ahmad","Irma", "Fakhri", "Fadli", "Aufal", "Raka", "Dandi", "Alief", "Farhan", "Fikri")
+    val countOfGroup = mentor.size + listAnggota.size
+    return countOfGroup
 }
 
 fun main() {
@@ -62,6 +72,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("Nawasenna", listOf("Ahmad","Irma", "Fakhri", "Fadli", "Aufal", "Raka", "Dandi", "Alief", "Farhan", "Fikri"), "Morning")
 
 }

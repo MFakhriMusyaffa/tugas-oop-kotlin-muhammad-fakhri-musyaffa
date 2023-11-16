@@ -9,7 +9,14 @@ fun main() {
     - Agar lebih mudah, gunakanlah for loop dan logika if untuk mengisi bilangan genap pada list
      */
     // Buat di bawah sini
+    val bilanganGenap: MutableList<Int> = mutableListOf()
 
+    for (i in 1..100){
+        if (i%2 == 0){
+            bilanganGenap.add(i)
+        }
+    }
+    println("Berikut ini ialah bilangan genap dari angka 1 hingga 100: $bilanganGenap\n")
 
     /** Latihan 2 Map
     Buatlah variabel bertipe Map dengan kriteria:
@@ -19,6 +26,7 @@ fun main() {
     - key "Feb", value February
     - dst...
     // Buat di bawah sini
+
 
     Cetak semua nama bulan dengan fungsi forEach sehingga hasil output seperti:
     - Jan -> January
@@ -31,5 +39,27 @@ fun main() {
      */
     // Buat di bawah sini
 
+    val namaBulan: Map<String, String> = mapOf(
+        "Jan" to "January",
+        "Feb" to "February",
+        "Mar" to "March",
+        "Apr" to "April",
+        "May" to "May",
+        "Jun" to "June",
+        "Jul" to "July",
+        "Aug" to "August",
+        "Sep" to "September",
+        "Oct" to "October",
+        "Nov" to "November",
+        "Dec" to "December"
+    )
 
+    namaBulan.forEach { (key, value) ->
+        println("$key -> $value")
+    }
+
+    val monthNow = namaBulan["Nov"]
+    val birthMonth = namaBulan["Apr"]
+
+    println("\nIt's $monthNow now, I was born in $birthMonth")
 }
