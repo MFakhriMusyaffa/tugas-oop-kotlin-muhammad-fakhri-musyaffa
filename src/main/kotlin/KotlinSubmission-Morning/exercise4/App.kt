@@ -4,10 +4,10 @@ fun main() {
     try {
         print("Masukkan umur Anda saat ini : ")
         val inputData = readLine()
-        val age = inputData?.toInt()
+        val umur = inputData?.toInt()
 
-        if (age != null) {
-            println("Umur Anda ialah : $age")
+        if (umur != null) {
+            println("Umur Anda ialah : $umur tahun")
         } else {
             throw NumberFormatException("Input tidak termasuk bilangan bulat")
         }
